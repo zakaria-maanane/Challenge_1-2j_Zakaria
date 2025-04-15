@@ -1,3 +1,7 @@
+
+"""Challenge 1 - Jeu PONG en Python """
+
+
 import os
 import time
 import random
