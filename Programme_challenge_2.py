@@ -1,7 +1,7 @@
 import os
 import time
 import random
-import msvcrt  # pour Windows ; sur Linux/macOS, remplace par 'getch' de 'curses'
+import msvcrt 
 
 # Paramètres du jeu
 largeur = 30
