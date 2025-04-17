@@ -3,7 +3,7 @@ import time
 import random
 import msvcrt 
 
-# Paramètres du jeu
+# ------ Paramètres du jeu ----
 largeur = 30
 personnage = 'O'
 saut = '^'
@@ -54,7 +54,7 @@ def jeu():
 
         affichage(obstacles, en_air, score)
 
-        if collision(obstacles, en_air):
+        if collision(obstacles, en_air): # en cas de collision j'engage un simplissime break pour termier la pertie 
             print("💥 GAME OVER 💥")
             break
 
