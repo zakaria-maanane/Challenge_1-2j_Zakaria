@@ -1,3 +1,6 @@
+'''
+Mini jeu de tir simple de Zakaria Maanane du 19/04/2025'''
+
 import time
 import os
 import random
@@ -30,11 +33,11 @@ def jeu():
             key = msvcrt.getch()
 
 
-            
+
             if key == b' ':
                 touche = True
                 if pos == position_cible:
-                    print(f"\n💥 TOUCHÉ ! Tu as visé juste à la position {pos} !")
+                    print(f"\n💥 TOUCHÉ ! Ta visé JUSTE à la position {pos} !")
                 else:
                     print(f"\n❌ Raté... Tu as tiré à la position {pos}, mais la cible était à {position_cible}.")
                 break
