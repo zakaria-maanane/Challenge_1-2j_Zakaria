@@ -1,0 +1,46 @@
+import time
+import os
+import random
+import msvcrt  # Windows uniquement
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def afficher_ligne(position, longueur=30):
+    ligne = ['-'] * longueur
+    ligne[position] = '👾'
+    print("".join(ligne))
+    print("\nAppuie sur ESPACE pour tirer !")
+
+def jeu():
+    longueur = 30
+    position_cible = random.randint(5, longueur - 6)  # Position aléatoire raisonnable
+    touche = False
+
+    print("=== MINI JEU DE TIR ===")
+    print("Essaie de tirer quand 👾 est à la position secrète (entre 5 et 25)")
+    input("Appuie sur Entrée pour commencer...")
+
+    for pos in range(longueur):
+        clear()
+        afficher_ligne(pos, longueur)
+        time.sleep(0.1)  # déplacement plus lent
+
+        if msvcrt.kbhit():
+            key = msvcrt.getch()
+
+
+            
+            if key == b' ':
+                touche = True
+                if pos == position_cible:
+                    print(f"\n💥 TOUCHÉ ! Tu as visé juste à la position {pos} !")
+                else:
+                    print(f"\n❌ Raté... Tu as tiré à la position {pos}, mais la cible était à {position_cible}.")
+                break
+
+    if not touche:
+        print(f"\n Tu n'as pas tiré... la cible était à la position {position_cible}.")
+
+if __name__ == "__main__":
+    jeu()
