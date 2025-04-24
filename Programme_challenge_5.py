@@ -1,3 +1,13 @@
+"""Challenge 5 Jeux de précision 
+
+Clique sur ON pour commencer le jeu.
+
+Clique à nouveau n’importe où dans la fenêtre pour "lancer".
+
+Le but est d’arrêter la barre bleue dans la zone rouge (zone de précision).
+
+Clique sur OFF pour arrêter le jeu."""
+
 import pygame
 import sys
 
@@ -5,7 +15,7 @@ import sys
 pygame.init()
 WIDTH, HEIGHT = 600, 400
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Jeu de précision - Lancer")
+pygame.display.set_caption("===Jeu de précision===")
 clock = pygame.time.Clock()
 
 # Couleurs
