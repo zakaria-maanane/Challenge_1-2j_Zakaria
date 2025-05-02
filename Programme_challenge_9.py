@@ -1,4 +1,4 @@
-""Challenge 9 carte France """"""
+"""Challenge 9 carte France """
 
 
 france_map = """
